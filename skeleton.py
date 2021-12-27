@@ -4,6 +4,7 @@ import re
 import sys
 import os, os.path
 import ConfigParser
+import json
 
 try:
     from Cheetah.Template import Template
@@ -79,10 +80,8 @@ def main(args):
 
     parser.set_defaults(**defaults)
 
-    parser.add_argument("--server_name", dest="server_name", help="server_name")
-    parser.add_argument("--domain", dest="domain", help="domain")
-    parser.add_argument("--location_path", dest="location_path", help="location_path")
-    parser.add_argument("--location_target", dest="location_target", help="location_target")
+    parser.add_argument("--param", dest="param", help="param")
+    # parser.add_argument("--db_host_ip", dest="db_host_ip", help="db_host_ip")
 
     #
     # Done with arguments
@@ -92,7 +91,7 @@ def main(args):
     args = parser.parse_args(remaining_argv)
 
     # Makes args into a dictionary to feed to searchList
-    d = args.__dict__
+    d = json.load(open("./config.json"))
 
     # Create template object
     # - the searchList=[d] is the best!
