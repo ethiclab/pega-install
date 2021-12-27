@@ -1,11 +1,12 @@
 #/usr/bin/env bash
 
+./skeleton.py -t config.properties.template > config.properties
+
 source config.properties
 
 function pega_install {
-
-for srv in ${HOST_NAME_ARRAY[@]}; do
-  ./ssh-config -l -H ${srv} || ./ssh-config -s -H ${srv} -o Hostname=${srv}
+for i in "${!HOST_NAME_ARRAY[@]}"; do
+  ./ssh-config -l -H ${HOST_NAME_ARRAY[$i]} || ./ssh-config -s -H ${HOST_NAME_ARRAY[$i]} -o Hostname=${HOST_NAME_IPADDRESS_ARRAY[$i]} -f ~/.ssh/config
 done
 
 for srv in ${HOST_NAME_ARRAY[@]}; do
