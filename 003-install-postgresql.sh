@@ -16,4 +16,5 @@ scp pg_hba.conf $CONNECTION:/home/postgres/11/data
 scp postgresql.conf $CONNECTION:/home/postgres/11/data
 ssh $CONNECTION 'sudo systemctl enable postgresql-11'
 ssh $CONNECTION 'sudo systemctl start postgresql-11'
+echo "Create password for user postgres"
 ssh $CONNECTION 'sudo passwd postgres'
