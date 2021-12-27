@@ -4,6 +4,7 @@ function usage {
   exit 1
 }
 [[ -z "$1" ]] && usage
+echo "008 - INSTALL TOMCAT"
 export CONNECTION="$1"
 wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.56/bin/apache-tomcat-9.0.56.tar.gz
 scp apache-tomcat-9.0.56.tar.gz $CONNECTION:/root/
