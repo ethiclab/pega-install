@@ -4,6 +4,7 @@ function usage {
   exit 1
 }
 [[ -z "$1" ]] && usage
+echo "006 - INSTALL PEGA"
 export CONNECTION="$1"
 ssh $CONNECTION 'cp .bashrc .pgsql_profile'
 
