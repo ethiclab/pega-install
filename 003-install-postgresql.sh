@@ -6,8 +6,8 @@ function usage {
 [[ -z "$1" ]] && usage
 echo "003 - INSTALL POSTGRESQL"
 export CONNECTION="$1"
-ssh $CONNECTION 'firewall-cmd --permanent --add-port=5432/tcp'
-ssh $CONNECTION 'firewall-cmd --reload'
+ssh $CONNECTION 'sudo firewall-cmd --permanent --add-port=5432/tcp'
+ssh $CONNECTION 'sudo firewall-cmd --reload'
 ssh $CONNECTION 'sudo dnf install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-8-x86_64/pgdg-redhat-repo-latest.noarch.rpm'
 ssh $CONNECTION 'sudo dnf -qy module disable postgresql'
 ssh $CONNECTION 'sudo dnf install -y postgresql11-server'
