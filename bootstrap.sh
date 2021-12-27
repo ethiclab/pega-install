@@ -9,4 +9,4 @@ curl -O -L https://github.com/ethiclab/pega-install/archive/refs/tags/${VERSION}
 unzip ${VERSION}.zip
 cd pega-install-${VERSION}
 source install.sh
-pega_install
+echo "Start installation with command: pega_install"
