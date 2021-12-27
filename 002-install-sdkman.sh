@@ -4,6 +4,7 @@ function usage {
   exit 1
 }
 [[ -z "$1" ]] && usage
+echo "002 - INSTALL SDKMAN"
 export CONNECTION="$1"
 ssh $COONECTION 'sudo dnf -qy install zip'
 ssh $CONNECTION 'sdk version || curl -s "https://get.sdkman.io" | bash'
