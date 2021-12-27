@@ -130,4 +130,5 @@ cd /home/Software/116967_Pega8.53/scripts
 chmod +x *.sh
 chmod +x bin/*
 ./install.sh
+./skeleton.py -t config.properties
 ```
