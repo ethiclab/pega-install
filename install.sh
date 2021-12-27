@@ -5,9 +5,7 @@ source config.properties
 function pega_install {
 
 for srv in ${HOST_NAME_ARRAY[@]}; do
-  ./ssh-config -l -H ${srv}
-  local retval=$?
-  return 1
+  ./ssh-config -l -H ${srv} || ./ssh-config -s -H ${srv} -o Hostname=${srv}
 done
 
 for srv in ${HOST_NAME_ARRAY[@]}; do
