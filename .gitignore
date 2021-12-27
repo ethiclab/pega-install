@@ -1,0 +1,4 @@
+setupDatabase.properties
+pg_hba.conf
+postgresql.conf
+*.pyc

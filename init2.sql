@@ -1,0 +1,12 @@
+drop schema if exists pegadata;
+create schema pegadata;
+drop schema if exists pegarules;
+create schema pegarules;
+grant usage on schema pegadata to baseuser;
+grant usage on schema pegarules to baseuser;
+grant create on schema pegadata to baseuser;
+grant create on schema pegarules to baseuser;
+alter default privileges in schema pegadata grant all on tables to baseuser;
+alter default privileges in schema pegarules grant all on tables to baseuser;
+grant execute on all functions in schema pegadata to baseuser;
+grant execute on all functions in schema pegarules to baseuser;
