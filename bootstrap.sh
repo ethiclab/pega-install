@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-VERSION=1.14
+VERSION=1.15
 yum update
 dnf -qy install unzip
 dnf -qy module install python27
