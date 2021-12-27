@@ -117,8 +117,6 @@ scp pegadb:~/11/data/pg_hba.conf .
 scp pegadb:~/11/data/postgresql.conf .
 
 ssh pegadb cp .bashrc .pgsql_profile
-ssh root@pegadb firewall-cmd --zone=public --add-port=5432/tcp --permanent
-ssh root@pegadb firewall-cmd --reload
 ssh root@pega1 chown -R pegauser:pegauser /home/Software
 ssh pega1
 curl -O -L https://jdbc.postgresql.org/download/postgresql-42.3.1.jar
