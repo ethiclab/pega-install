@@ -4,6 +4,7 @@ function usage {
   exit 1
 }
 [[ -z "$1" ]] && usage
+echo "009 - DEPLOY PEGA TO TOMCAT SERVER"
 export CONNECTION="$1"
 scp postgresql-42.3.1.jar $CONNECTION:/usr/share/tomcat/lib
 scp tomcat-users.xml $CONNECTION:/usr/share/tomcat/conf/tomcat-users.xml
