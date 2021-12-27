@@ -2,7 +2,7 @@
 
 ## Cosa serve?
 
-Trasferire l'archivio zip di Pega `116967_Pega8.53.zip` nel server dove verrà installato il database.
+Trasferire l'archivio zip di Pega `116967_Pega8.53.zip` nel server dove verrà installato il database sotto `/tmp`.
 
 ## Caratteristiche
 
