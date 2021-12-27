@@ -21,7 +21,7 @@ for srv in ${HOST_NAME_ARRAY[@]}; do
   ./002-install-sdkman.sh ${srv} || return 1
 done
 
-./003-install-postgresql.sh ${HOST_NAME_DATABASE} || return 1
+./003-install-postgresql.sh pegauser@${HOST_NAME_DATABASE} || return 1
 
 ./004-enable-ssh-for-postgres-user.sh ${HOST_NAME_DATABASE} || return 1
 
