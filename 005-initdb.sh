@@ -6,3 +6,4 @@ function usage {
 [[ -z "$1" ]] && usage
 export CONNECTION="$1"
 ssh $CONNECTION 'psql' < init.sql
+ssh $CONNECTION 'psql pegadb' < init2.sql
