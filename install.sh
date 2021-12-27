@@ -6,7 +6,7 @@ source config.properties
 
 function pega_install {
 for i in "${!HOST_NAME_ARRAY[@]}"; do
-  ./ssh-config -l -H ${HOST_NAME_ARRAY[$i]} || ./ssh-config -s -H ${HOST_NAME_ARRAY[$i]} -o Hostname=${HOST_NAME_IPADDRESS_ARRAY[$i]} -f ~/.ssh/config
+  ./ssh-config -s -H ${HOST_NAME_ARRAY[$i]} -o Hostname=${HOST_NAME_IPADDRESS_ARRAY[$i]} -f ~/.ssh/config
 done
 
 for srv in ${HOST_NAME_ARRAY[@]}; do
