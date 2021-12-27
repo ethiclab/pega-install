@@ -4,6 +4,7 @@ function usage {
   exit 1
 }
 [[ -z "$1" ]] && usage
+echo "001 - CREATE USER PEGAUSER"
 export CONNECTION="root@$1"
 export CONNECTION2="pegauser@$1"
 ssh $CONNECTION 'groupadd -f -g 9001 pegauser'
