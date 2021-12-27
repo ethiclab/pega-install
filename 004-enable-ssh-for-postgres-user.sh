@@ -5,4 +5,5 @@ function usage {
 }
 [[ -z "$1" ]] && usage
 export CONNECTION="$1"
+echo "Copy ssh id to remote machine"
 ssh-copy-id $CONNECTION
