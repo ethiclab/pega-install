@@ -16,4 +16,4 @@ ssh $CONNECTION 'cd /tmp; unzip -d 116967_Pega8.53 116967_Pega8.53.zip'
 
 scp setupDatabase.properties $CONNECTION:/tmp/116967_Pega8.53/scripts
 
-ssh $CONNECTION 'nohup /tmp/116967_Pega8.53/scripts/install.sh &'
+ssh $CONNECTION '/tmp/116967_Pega8.53/scripts/install.sh'
