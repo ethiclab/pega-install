@@ -4,6 +4,7 @@ function usage {
   exit 1
 }
 [[ -z "$1" ]] && usage
+echo "003 - INSTALL POSTGRESQL"
 export CONNECTION="$1"
 ssh $CONNECTION 'firewall-cmd --permanent --add-port=5432/tcp'
 ssh $CONNECTION 'firewall-cmd --reload'
