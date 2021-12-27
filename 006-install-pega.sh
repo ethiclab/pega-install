@@ -12,6 +12,8 @@ scp postgresql-42.3.1.jar $CONNECTION:/tmp
 
 ./skeleton.py -t setupDatabase.properties.template > setupDatabase.properties
 
-scp setupDatabase.properties $CONNECTION:/tmp/116967_Pega8.53/scripts 
+ssh $CONNECTION 'cd /tmp; unzip -d 116967_Pega8.53 116967_Pega8.53.zip'
+
+scp setupDatabase.properties $CONNECTION:/tmp/116967_Pega8.53/scripts
 
 ssh $CONNECTION 'nohup /tmp/116967_Pega8.53/scripts/install.sh &'
