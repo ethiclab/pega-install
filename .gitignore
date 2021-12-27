@@ -1,2 +1,4 @@
 *.pyc
 *.zip
+setupDatabase.properties
+pg_hba.conf
