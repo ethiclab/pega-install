@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
+VERSION=1.3
 yum update
 dnf -qy install unzip
 dnf -qy module install python27
 ln -s /usr/bin/python2 /usr/bin/python
 python2 -m pip install --user Cheetah
-curl -O -L https://github.com/ethiclab/pega-install/archive/refs/tags/1.2.zip
-unzip 1.2.zip
-cd pega-install-1.2
+curl -O -L https://github.com/ethiclab/pega-install/archive/refs/tags/${VERSION}.zip
+unzip ${VERSION}.zip
+cd pega-install-${VERSION}
 source install.sh
 pega_install
