@@ -21,13 +21,13 @@ for srv in ${HOST_NAME_ARRAY[@]}; do
   ./002-install-sdkman.sh ${srv} || return 1
 done
 
-./003-install-postgresql.sh pegauser@${HOST_NAME_DATABASE} || return 1
+./003-install-postgresql.sh ${HOST_NAME_DATABASE} || return 1
 
 ./004-enable-ssh-for-postgres-user.sh ${HOST_NAME_DATABASE} || return 1
 
 ./005-initdb.sh postgres@${HOST_NAME_DATABASE} || return 1
 
-./006-install-pega.sh pegauser@${HOST_NAME_DATABASE} || return 1
+./006-install-pega.sh ${HOST_NAME_DATABASE} || return 1
 
 for srv in ${HOST_NAME_ARRAY[@]}; do
   ./007-install-ntp.sh ${srv} || return 1
