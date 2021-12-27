@@ -3,3 +3,4 @@
 setupDatabase.properties
 pg_hba.conf
 config.properties
+context.xml
