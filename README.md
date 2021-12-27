@@ -116,10 +116,6 @@ per l'utente postgres nello step successivo.
 
 ./002-install-sdkman.sh pegadb
 
-scp pega1:/home/Software/116967_Pega8.53/scripts/setupDatabase.properties .
-scp pegadb:~/11/data/pg_hba.conf .
-scp pegadb:~/11/data/postgresql.conf .
-
 ssh pegadb cp .bashrc .pgsql_profile
 ssh root@pega1 chown -R pegauser:pegauser /home/Software
 ssh pega1

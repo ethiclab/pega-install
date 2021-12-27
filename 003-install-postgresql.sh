@@ -11,6 +11,9 @@ ssh $CONNECTION 'sudo dnf install -y https://download.postgresql.org/pub/repos/y
 ssh $CONNECTION 'sudo dnf -qy module disable postgresql'
 ssh $CONNECTION 'sudo dnf install -y postgresql11-server'
 ssh $CONNECTION 'sudo /usr/pgsql-11/bin/postgresql-11-setup initdb'
+scp setupDatabase.properties $CONNECTION:/tmp/Software/116967_Pega8.53/scripts/setupDatabase.properties
+scp pg_hba.conf $CONNECTION:~/11/data/pg_hba.conf
+scp postgresql.conf $CONNECTION:~/11/data/postgresql.conf
 ssh $CONNECTION 'sudo systemctl enable postgresql-11'
 ssh $CONNECTION 'sudo systemctl start postgresql-11'
 ssh $CONNECTION 'sudo passwd postgres'
