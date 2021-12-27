@@ -26,7 +26,8 @@ done
 ./004-enable-ssh-for-postgres-user.sh ${HOST_NAME_DATABASE} || return 1
 
 ./005-initdb.sh postgres@${HOST_NAME_DATABASE} || return 1
-./006-initdb.sh postgres@${HOST_NAME_DATABASE} || return 1
+
+./006-install-pega.sh pegauser@${HOST_NAME_DATABASE} || return 1
 
 for srv in ${HOST_NAME_ARRAY[@]}; do
   ./007-install-ntp.sh ${srv} || return 1
