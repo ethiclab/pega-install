@@ -11,7 +11,6 @@ ssh $CONNECTION 'cp .bashrc .pgsql_profile'
 scp postgresql-42.3.1.jar $CONNECTION:/tmp
 
 ./skeleton.py -t setupDatabase.properties.template > setupDatabase.properties
-./skeleton.py -t pg_hba.conf.template > pg_hba.conf
 
 scp setupDatabase.properties $CONNECTION:/tmp/116967_Pega8.53/scripts 
 
