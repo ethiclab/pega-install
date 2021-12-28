@@ -39,6 +39,7 @@ done
 
 for srv in ${HOST_NAME_APP_ARRAY[@]}; do
   ./009-deploy-pega.sh ${srv} || return 1
+  ./010-deploy-pega.sh ${srv} || return 1
 done
 
 return 0
