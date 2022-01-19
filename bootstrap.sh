@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 function throw {
   >&2 echo $@
+  exit 1
 }
 VERSION=1.20
 [[ ! -x $(which yum) ]] && throw yum not found
