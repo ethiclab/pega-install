@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
+function throw {
+  >&2 echo $@
+}
 VERSION=1.20
-[[ ! -x $(which yum) ]] && exit 1
+[[ ! -x $(which yum) ]] && throw yum not found
+[[ ! -x $(which dnf) ]] && throw dnf not found
 yum update
 dnf -qy install unzip
 dnf -qy module install python27
