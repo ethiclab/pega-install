@@ -9,6 +9,8 @@ Trasferire l'archivio zip di Pega `116967_Pega8.53.zip` nel server dove verrà i
 Esempio con AWS EC2
 
 1. Lanciare 3 macchine Oracle Linux 8.5 (Su aws è disponibile solo una versione community 8.4)
+2. Associare degli ip elastici ad ogni istanza
+3. Configurare i host ssh pega1, pega2 e pega3 per agevolare la connessione ssh
 
 ## Installazione
 
