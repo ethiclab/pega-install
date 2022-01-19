@@ -6,6 +6,6 @@ function usage {
 [[ -z "$1" ]] && usage
 echo "002 - INSTALL SDKMAN"
 export CONNECTION="$1"
-ssh $COONECTION 'sudo dnf -qy install zip'
+ssh $CONNECTION 'sudo dnf -qy install zip'
 ssh $CONNECTION 'sdk version || curl -s "https://get.sdkman.io" | bash'
 ssh $CONNECTION 'java --version || sdk install java 11.0.12-open'
