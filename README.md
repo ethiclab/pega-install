@@ -6,6 +6,8 @@ Trasferire l'archivio zip di Pega `116967_Pega8.53.zip` nel server dove verrà i
 
 ## Installazione
 
+Collegarsi via ssh al server. A quale server? boh!
+
 ```bash
-pega_install
+curl https://raw.githubusercontent.com/ethiclab/pega-install/main/bootstrap.sh | sudo bash
 ```
