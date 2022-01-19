@@ -15,6 +15,7 @@ VERSION=1.20
 [[ ! -x $(which dnf) ]] && throw dnf not found
 $SUDO yum update -qy || throw error
 $SUDO dnf -qy install unzip || throw error
+$SUDO dnf -qy install zip || throw error
 $SUDO dnf -qy module install python27 || throw error
 $SUDO ln -f -s /usr/bin/python2 /usr/bin/python
 python2 -m pip install --user Cheetah3
