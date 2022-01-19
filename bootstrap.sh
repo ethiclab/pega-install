@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
+function log_info {
+  >&2 echo $@
+}
+log_info bootstrap version 2.0
 function throw {
   >&2 echo $@
   exit 1
