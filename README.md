@@ -48,3 +48,15 @@ If you get an error like:
 ```
 
 Then you need to configure your ssh accordingly for resolving pega1, pega2, pega3 and pegadb servers as stated above.
+
+If you get an error like:
+
+```
+/usr/bin/ssh-copy-id: ERROR: Bad owner or permissions on /home/ec2-user/.ssh/config
+```
+
+The fix it:
+
+```bash
+chmod 400 ~/.ssh/config
+```
