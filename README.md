@@ -19,5 +19,5 @@ Collegarsi via ssh al server pega1
 
 ```bash
 ssh pega1
-curl https://raw.githubusercontent.com/ethiclab/pega-install/main/bootstrap.sh | sudo bash
+curl https://raw.githubusercontent.com/ethiclab/pega-install/main/bootstrap.sh | bash
 ```
