@@ -21,3 +21,16 @@ Collegarsi via ssh al server pega1
 ssh pega1
 curl https://raw.githubusercontent.com/ethiclab/pega-install/main/bootstrap.sh | bash
 ```
+
+If you get an error like:
+
+```
+IOError: [Errno 2] No such file or directory: '/home/ec2-user/.ssh/config'
+/usr/bin/ssh-copy-id: ERROR: No identities found
+```
+
+Then create an ssh key pair:
+
+```bash
+ssh-keygen
+```
