@@ -40,3 +40,11 @@ and retry:
 ```bash
 pega_install
 ```
+
+If you get an error like:
+
+```
+/usr/bin/ssh-copy-id: ERROR: ssh: Could not resolve hostname pega1: Name or service not known
+```
+
+Then you need to configure your ssh accordingly for resolving pega1, pega2, pega3 and pegadb servers as stated above.
