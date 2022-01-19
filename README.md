@@ -60,3 +60,22 @@ The fix it:
 ```bash
 chmod 600 ~/.ssh/config
 ```
+
+If you get an error like:
+
+```
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Permissions 0664 for '/home/ec2-user/.ssh/xcally.pem' are too open.
+It is required that your private key files are NOT accessible by others.
+This private key will be ignored.
+Load key "/home/ec2-user/.ssh/xcally.pem": bad permissions
+root@18.135.37.151: Permission denied (publickey,gssapi-keyex,gssapi-with-mic).
+```
+
+Fix it.
+
+```bash
+chmod 400 ~/.ssh/xcally.pem
+```
