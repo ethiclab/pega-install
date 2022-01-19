@@ -58,5 +58,5 @@ If you get an error like:
 The fix it:
 
 ```bash
-chmod 400 ~/.ssh/config
+chmod 600 ~/.ssh/config
 ```
