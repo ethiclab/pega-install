@@ -6,7 +6,7 @@ function throw {
 VERSION=1.20
 [[ ! -x $(which yum) ]] && throw yum not found
 [[ ! -x $(which dnf) ]] && throw dnf not found
-yum update
+yum update -qy
 dnf -qy install unzip
 dnf -qy module install python27
 ln -f -s /usr/bin/python2 /usr/bin/python
