@@ -34,3 +34,9 @@ Then create an ssh key pair:
 ```bash
 ssh-keygen
 ```
+
+and retry:
+
+```bash
+pega_install
+```
