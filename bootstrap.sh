@@ -23,9 +23,13 @@ python2 -m pip install --user Cheetah3
 curl -O -L https://github.com/ethiclab/pega-install/archive/refs/tags/${VERSION}.zip
 unzip ${VERSION}.zip
 cd pega-install-${VERSION}
-echo "Configure config.json accordingly and then do:"
+echo ""
+echo ""
+echo "Almost done!"
 echo ""
 echo "    cd pega-install-${VERSION}"
+echo "    # configure config.json accordingly and then issue the following command:"
+echo ""
 echo "    source install.sh"
 echo ""
 echo "then, start installation with command:"
