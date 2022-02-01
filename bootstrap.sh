@@ -2,7 +2,7 @@
 function log_info {
   >&2 echo $@
 }
-log_info bootstrap version 2.7
+log_info bootstrap version 2.8
 function throw {
   >&2 echo $@
   exit 1
@@ -10,7 +10,7 @@ function throw {
 if [ "$EUID" -ne 0 ]
   then export SUDO=sudo
 fi
-VERSION=1.21
+VERSION=1.22
 [[ ! $(which --version) ]] && throw which not found
 [[ ! -x $(which yum) ]] && throw yum not found
 [[ ! -x $(which dnf) ]] && throw dnf not found
