@@ -2,7 +2,7 @@
 function log_info {
   >&2 echo $@
 }
-log_info bootstrap version 2.8
+log_info bootstrap version 2.9
 function throw {
   >&2 echo $@
   exit 1
@@ -25,6 +25,12 @@ unzip ${VERSION}.zip
 [[ ! -f "~/.ssh/id_rsa" ]] && ssh-keygen -f ~/.ssh/id_rsa -q
 [[ ! -f "~/.ssh/config" ]] && touch ~/.ssh/config
 cd pega-install-${VERSION}
+echo "pega1 address"
+dig +short pega1
+echo "pega2 address"
+dig +short pega2
+echo "pegadb address"
+dig +short pegadb
 echo ""
 echo ""
 echo "Almost done!"
