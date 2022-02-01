@@ -11,7 +11,7 @@ if [ "$EUID" -ne 0 ]
   then export SUDO=sudo
 fi
 VERSION=1.21
-[[ ! $(which) ]] && throw which not found
+[[ ! $(which --version) ]] && throw which not found
 [[ ! -x $(which yum) ]] && throw yum not found
 [[ ! -x $(which dnf) ]] && throw dnf not found
 $SUDO yum update -qy || throw error
