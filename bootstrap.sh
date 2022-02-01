@@ -2,7 +2,7 @@
 function log_info {
   >&2 echo $@
 }
-log_info bootstrap version 2.4
+log_info bootstrap version 2.5
 function throw {
   >&2 echo $@
   exit 1
