@@ -2,7 +2,7 @@
 function log_info {
   >&2 echo $@
 }
-log_info bootstrap version 2.5
+log_info bootstrap version 2.6
 function throw {
   >&2 echo $@
   exit 1
@@ -22,6 +22,8 @@ $SUDO ln -f -s /usr/bin/python2 /usr/bin/python
 python2 -m pip install --user Cheetah3
 curl -O -L https://github.com/ethiclab/pega-install/archive/refs/tags/${VERSION}.zip
 unzip ${VERSION}.zip
+[[ ! -f "~/.ssh/id_rsa" ]] && ssh-keygen
+[[ ! -f "~/.ssh/config" ]] && touch ~/.ssh/config
 cd pega-install-${VERSION}
 echo ""
 echo ""
