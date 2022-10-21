@@ -10,3 +10,4 @@ alter default privileges in schema pegadata grant all on tables to baseuser;
 alter default privileges in schema pegarules grant all on tables to baseuser;
 grant execute on all functions in schema pegadata to baseuser;
 grant execute on all functions in schema pegarules to baseuser;
+create extension if not exists pg_stat_statements;
