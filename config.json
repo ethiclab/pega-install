@@ -1,7 +1,10 @@
 {
-  "pega1_host_ip": "172.18.0.9",
-  "pega2_host_ip": "172.18.0.10",
-  "db_host_ip": "172.18.0.8",
-  "net_class": "172.18.0.0/24",
-  "pega_domain": "pega.ethiclab.it"
+  "pega1_host_ip": "10.103.0.1",
+  "pega2_host_ip": "10.103.0.2",
+  "db_host_ip": "10.103.0.17",
+  "db_password": "!m!JSF8a",
+  "net_class": "10.103.0.0/24",
+  "pega_domain": "iqvia.bizmatica.com"
 }
+
+

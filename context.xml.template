@@ -5,7 +5,7 @@
        driverClassName="org.postgresql.Driver"
        url="jdbc:postgresql://$db_host_ip:5432/pegadb"
        username="baseuser"
-       password="password"
+       password="$db_password"
        maxTotal="100"
        maxIdle="30"
        maxWaitMillis="10000"
@@ -15,7 +15,7 @@
 
     <Environment name="prconfig/database/databases/PegaDATA/defaultSchema" value="pegadata" type="java.lang.String"/>
 
-    <Environment name="url/initialization/explicittempdir" value="/tmp" type="java.lang.String"/>
+    <Environment name="url/initialization/explicittempdir" value="/tmp/pegatemp" type="java.lang.String"/>
 
     <Manager pathname="" />
     

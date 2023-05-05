@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/Users/rzagnoni/.pyenv/versions/2.7.18/bin/python
 
 import re
 import sys

@@ -39,7 +39,7 @@ pega.jdbc.driver.class=org.postgresql.Driver
 pega.database.type=postgres
 pega.jdbc.url=jdbc:postgresql://${db_host_ip}:5432/pegadb
 pega.jdbc.username=baseuser
-pega.jdbc.password=password
+pega.jdbc.password=!m!JSF8a
 
 # TEMPORARY ADMIN PASSWORD - New installs only
 # Set the temporary password for administrator@pega.com that is used to install Pega Platform.
